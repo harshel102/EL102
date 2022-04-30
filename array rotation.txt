@@ -1,0 +1,15 @@
+int* rotLeft(int a_count, int* a, int d, int* result_count) {
+    *result_count=a_count;
+    int *result=calloc(a_count,sizeof(int));
+    
+    int i;
+    int index=d;
+    for(i=0;i<a_count;i++){
+        result[i]=a[index];
+        ++index;
+        
+        if(index==a_count)
+        index=0;
+    }
+    return result;
+}
